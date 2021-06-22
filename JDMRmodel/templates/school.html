@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+  background-color: #2a4066;
+}
+
+.form-container {
+  /* margin: 100px auto; */
+  padding: 30px;
+  max-width: 350px;
+  background: white;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 100px auto;
+  max-width: 350px;
+  /* background: white; */
+  box-sizing: border-box;
+}
+
+.form-container .head {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Inputs {
+  padding-top: 50px;
+}
+
+form {
+  width: 100%;
+}
+
+form label {
+  display: block;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: grey;
+  line-height: 30px;
+}
+
+input {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid rgb(133, 133, 133);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 5px;
+  background: #3fb996;
+  border: hidden;
+  color: white;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer {
+  text-align: center;
+  font-size: 10px;
+  box-sizing: border-box;
+  padding: 5px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.signup {
+  margin: 20px;
+  text-align: center;
+  color: white;
+  /* font-weight: bold; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.signup a {
+  color: #3fb996;
+}
+
+    </style>
+</head>
+<body>
+<form action="" method="post" action="">
+    {% csrf_token %}
+      <div class="container">
+    <div class="form-container">
+      <div class="head">
+        <h3>Sign Up</h3>
+        <p>It's free and only takes a minute</p>
+      </div>
+      <form class="Inputs" method="post">
+        <label for="{{form.Year_Established.label}}">Year of Establishment</label>
+        {{form.Year_Established}}
+
+        <label for="{{form.School_Type.label}}">School Type</label>
+        {{form.School_Type}}
+
+        <label for="{{form.gender.label}}">Gender</label>
+        {{form.gender}}
+
+        <label for="{{form.Boarding.label}}">Boarding</label>
+        {{form.Boarding}}
+
+        <label for="{{form.Grades.label}}">Grades</label>
+        {{form.Grades}}
+
+        <label for="{{form.Admission_Period.label}}">Admission Period</label>
+        {{form.Admission_Period}}
+
+        <label for="{{form.Curriculum.label}}">Curriculum</label>
+        {{form.Curriculum}}
+
+        <label for="{{form.School_Level.label}}">School Level</label>
+        {{form.School_Level}}
+
+        <label for="{{form.Description.label}}">Description</label>
+        {{form.Description}}
+          <button type="submit" >Sign Up</button>
+
+         <div>{{ form.errors }}</div>
+      </form>
+      <div class="footer">
+        <p>By clicking the Signup Button you agree to our
+          <a href="#">Term & conditons </a>and <a href="#">Prinvacy policy</a></p>
+      </div>
+    </div>
+    <div class="signup"> Already have a account ? <a href="#">Login Here</a></div>
+</div>
+</form>
+</body>
+</html>
